@@ -19,7 +19,7 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
 
-      <Route path='/feeling'>
+      <Route path='/' exact>
           <Feeling />
         </Route>
 
