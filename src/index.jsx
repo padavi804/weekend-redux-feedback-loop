@@ -15,7 +15,12 @@ const currentFeeling = (state = '', action) => {
     return state;
 }
 
-
+const currentUnderstanding = (state = '', action) => {
+    if (action.type === 'UPDATE_CURRENT_UNDERSTANDING') {
+        return action.payload;
+    }
+    return state;
+}
 
 
 
@@ -26,7 +31,7 @@ const currentFeeling = (state = '', action) => {
 const storeInstance = createStore(
     combineReducers(
         {
-            currentFeeling,
+            currentFeeling, currentUnderstanding,
         }
     ),
     // Setup logger
