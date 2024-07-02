@@ -14,7 +14,7 @@ const currentFeeling = (state = '', action) => {
 }
 
 
-
+// Use the store for organizing things from index.jsx
 
 
 

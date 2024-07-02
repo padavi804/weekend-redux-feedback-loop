@@ -38,10 +38,10 @@ function Comments() {
                 >
                     <TextField
                         id="outlined-multiline-static"
-                        label="Multiline"
+                        label="Comment"
                         multiline
                         rows={4}
-                        defaultValue="Default Value"
+                        defaultValue=""
                     />
                 </Box>
                 <Button variant="contained" color="primary" type="submit"
