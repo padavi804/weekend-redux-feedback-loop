@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-
+import Button from '@mui/material/Button';
+import { useHistory } from 'react-router-dom';
 
 function Review() {
 
@@ -9,6 +9,12 @@ const currentUnderstanding = useSelector (store => store.currentUnderstanding)
 const currentSupport = useSelector (store => store.currentSupport)
 const currentComment = useSelector (store => store.currentComment)
 
+const history = useHistory();
+const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('comment submitted');
+    history.push('/thankyou');
+}
 
     return (
         <div>
@@ -19,10 +25,9 @@ const currentComment = useSelector (store => store.currentComment)
                 <p>Current comments: {currentComment}</p>
 
             <p>This is where the review is displayed</p>
-
-            <Link to='/thankyou'>Next</Link>
+            <Button variant="contained" color="primary" type="submit" onClick={(e) => handleSubmit(e)}
+                    >Next</Button>
         </div>
-
     )
 }
 
