@@ -33,6 +33,7 @@ function Comments() {
                     autoComplete="off"
                 >
                     <TextField
+                        data-testid="input"
                         id="outlined-multiline-static"
                         label="Comment"
                         multiline
@@ -42,7 +43,7 @@ function Comments() {
                         onChange={(evt) => setCurrentComment(evt.target.value)}
                     />
                 </Box>
-                <Button variant="contained" color="primary" type="submit"
+                <Button variant="contained" color="primary" type="submit" data-testid="next"
                 >Next</Button>
             </form>
             </div>

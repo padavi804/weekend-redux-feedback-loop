@@ -25,7 +25,7 @@ const handleSubmit = (e) => {
                 <p>Current comments: {currentComment}</p>
 
             <p>This is where the review is displayed</p>
-            <Button variant="contained" color="primary" type="submit" onClick={(e) => handleSubmit(e)}
+            <Button variant="contained" color="primary" type="submit" data-testid="next" onClick={(e) => handleSubmit(e)}
                     >Next</Button>
         </div>
     )

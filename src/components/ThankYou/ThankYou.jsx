@@ -14,7 +14,7 @@ function ThankYou (){
         <div>
             <h2>Thank You</h2>
         <p></p>
-        <Button variant="contained" color="primary" type="submit" onClick={(e) => handleSubmit(e)}
+        <Button variant="contained" color="primary" type="submit" data-testid="next" onClick={(e) => handleSubmit(e)}
                     >Submit New Feedback</Button>
     </div>
     )
