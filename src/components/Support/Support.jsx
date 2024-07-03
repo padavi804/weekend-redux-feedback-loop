@@ -31,7 +31,7 @@ function Support() {
             <div>
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <Box
-                        component="form"
+                        // component="form"
                         sx={{
                             '& > :not(style)': { m: 1, width: '25ch' },
                         }}

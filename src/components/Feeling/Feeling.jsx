@@ -12,19 +12,20 @@ function Feeling() {
     const dispatch = useDispatch();
 
     const [currentFeeling, setCurrentFeeling] = useState('');
-
+    const history = useHistory();
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('feelings submitted');
         dispatch({ type: 'UPDATE_CURRENT_FEELING', payload: currentFeeling });
         setCurrentFeeling('');
-    }
-    const history = useHistory();
-    const handleClick = (evt) => {
-        evt.preventDefault();
-
         history.push('/understanding');
     }
+
+    // const handleClick = (evt) => {
+    //     evt.preventDefault();
+
+
+    // }
 
 
     return (
@@ -33,7 +34,7 @@ function Feeling() {
             <div>
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <Box
-                        component="form"
+                        // component="form"
                         sx={{
                             '& > :not(style)': { m: 1, width: '25ch' },
                         }}
@@ -41,10 +42,10 @@ function Feeling() {
                         autoComplete="off"
 
                     >
-                        <TextField id="outlined-basic" label="1-10" variant="outlined" value = {currentFeeling} onChange={(evt) => setCurrentFeeling(evt.target.value)} />
+                        <TextField id="outlined-basic" label="1-10" variant="outlined" value={currentFeeling} onChange={(evt) => setCurrentFeeling(evt.target.value)} />
                     </Box>
                     <Button variant="contained" color="primary" type="submit"
-                    onClick={handleClick}
+                    // onClick={handleClick}
                     >Next</Button>
 
                 </form>

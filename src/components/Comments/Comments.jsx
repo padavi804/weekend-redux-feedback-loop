@@ -29,7 +29,7 @@ function Comments() {
             <h2>Any comments you want to leave?</h2>
             <form onSubmit={(e) => handleSubmit(e)}>
                 <Box
-                    component="form"
+                    // component="form"
                     sx={{
                         '& .MuiTextField-root': { m: 1, width: '25ch' },
                     }}
