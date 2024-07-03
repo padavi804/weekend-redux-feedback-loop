@@ -17,7 +17,7 @@ function Feeling() {
         e.preventDefault();
         console.log('feelings submitted');
         dispatch({ type: 'UPDATE_CURRENT_FEELING', payload: currentFeeling });
-        setCurrentFeeling('');
+        setCurrentFeeling({currentFeeling});
         history.push('/understanding');
     }
 

@@ -5,28 +5,24 @@ import { useDispatch } from 'react-redux'
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Button from '@mui/material/Button';
+
 function Comments() {
 
     const dispatch = useDispatch();
-
     const [currentComment, setCurrentComment] = useState('');
-
+    const history = useHistory();
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('comment submitted');
         dispatch({ type: 'UPDATE_CURRENT_COMMENT', payload: currentComment });
-        setCurrentComment('');
-    }
-    const history = useHistory();
-    const handleClick = (evt) => {
-        evt.preventDefault();
-
+        // setCurrentComment('');
         history.push('/review');
     }
 
     return (
         <div>
             <h2>Any comments you want to leave?</h2>
+            <div>
             <form onSubmit={(e) => handleSubmit(e)}>
                 <Box
                     // component="form"
@@ -42,12 +38,14 @@ function Comments() {
                         multiline
                         rows={4}
                         defaultValue=""
+                        value={currentComment} 
+                        onChange={(evt) => setCurrentComment(evt.target.value)}
                     />
                 </Box>
                 <Button variant="contained" color="primary" type="submit"
-                    onClick={handleClick}
                 >Next</Button>
             </form>
+            </div>
         </div>
     )
 }

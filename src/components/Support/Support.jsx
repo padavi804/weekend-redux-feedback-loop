@@ -7,27 +7,21 @@ import { useHistory } from 'react-router-dom';
 import Button from '@mui/material/Button';
 
 function Support() {
+
     const dispatch = useDispatch();
-
     const [currentSupport, setCurrentSupport] = useState('');
-
+    const history = useHistory();
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('support submitted');
         dispatch({ type: 'UPDATE_CURRENT_SUPPORT', payload: currentSupport });
-        setCurrentSupport('');
-    }
-    const history = useHistory();
-    const handleClick = (evt) => {
-        evt.preventDefault();
-
+        // setCurrentSupport('');
         history.push('/comments');
     }
 
-
     return (
         <div>
-              <h2>How well are you being supported?</h2>
+            <h2>How well are you being supported?</h2>
             <div>
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <Box
@@ -39,10 +33,9 @@ function Support() {
                         autoComplete="off"
 
                     >
-                        <TextField id="outlined-basic" label="1-10" variant="outlined" value = {currentSupport} onChange={(evt) => setCurrentSupport(evt.target.value)} />
+                        <TextField id="outlined-basic" label="1-10" variant="outlined" value={currentSupport} onChange={(evt) => setCurrentSupport(evt.target.value)} />
                     </Box>
                     <Button variant="contained" color="primary" type="submit"
-                    onClick={handleClick}
                     >Next</Button>
 
                 </form>
@@ -53,7 +46,7 @@ function Support() {
     )
 }
 
-    
+
 
 
 

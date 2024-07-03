@@ -10,24 +10,21 @@ function Understanding() {
     const dispatch = useDispatch();
 
     const [currentUnderstanding, setCurrentUnderstanding] = useState('');
-
+    const history = useHistory();
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('understanding submitted');
         dispatch({ type: 'UPDATE_CURRENT_UNDERSTANDING', payload: currentUnderstanding });
-        setCurrentUnderstanding('');
-    }
-    const history = useHistory();
-    const handleClick = (evt) => {
-        evt.preventDefault();
-
+        // setCurrentUnderstanding('');
         history.push('/support');
     }
 
 
+
+
     return (
         <div>
-              <h2>How well are you understanding the content?</h2>
+            <h2>How well are you understanding the content?</h2>
             <div>
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <Box
@@ -39,10 +36,9 @@ function Understanding() {
                         autoComplete="off"
 
                     >
-                        <TextField id="outlined-basic" label="1-10" variant="outlined" value = {currentUnderstanding} onChange={(evt) => setCurrentUnderstanding(evt.target.value)} />
+                        <TextField id="outlined-basic" label="1-10" variant="outlined" value={currentUnderstanding} onChange={(evt) => setCurrentUnderstanding(evt.target.value)} />
                     </Box>
                     <Button variant="contained" color="primary" type="submit"
-                    onClick={handleClick}
                     >Next</Button>
 
                 </form>
@@ -53,7 +49,7 @@ function Understanding() {
     )
 }
 
-    
+
 
 
 
