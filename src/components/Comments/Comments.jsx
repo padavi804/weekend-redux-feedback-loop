@@ -35,10 +35,7 @@ function Comments() {
                     <textarea
                         data-testid="input"
                         id="outlined-multiline-static"
-                        label="Comment"
-                        multiline
-                        rows={4}
-                        // defaultValue=""
+                        label="Comment"                                              
                         value={currentComment} 
                         onChange={(evt) => setCurrentComment(evt.target.value)}
                     />
