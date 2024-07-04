@@ -38,7 +38,7 @@ function Comments() {
                         label="Comment"
                         multiline
                         rows={4}
-                        defaultValue=""
+                        // defaultValue=""
                         value={currentComment} 
                         onChange={(evt) => setCurrentComment(evt.target.value)}
                     />
