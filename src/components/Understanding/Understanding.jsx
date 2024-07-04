@@ -36,7 +36,7 @@ function Understanding() {
                         autoComplete="off"
 
                     >
-                        <TextField data-testid="input" id="outlined-basic" label="1-10" variant="outlined" value={currentUnderstanding} onChange={(evt) => setCurrentUnderstanding(evt.target.value)} />
+                        <input data-testid="input" id="outlined-basic" label="1-10" variant="outlined" value={currentUnderstanding} onChange={(evt) => setCurrentUnderstanding(evt.target.value)} />
                     </Box>
                     <Button variant="contained" color="primary" type="submit" data-testid="next"
                     >Next</Button>

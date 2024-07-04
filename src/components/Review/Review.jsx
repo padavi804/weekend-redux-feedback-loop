@@ -16,7 +16,7 @@ const history = useHistory();
 const handleSubmit = (e) => {
     e.preventDefault();
     console.log('comment submitted');
-    history.push('/thankyou');
+    
 
 axios({
     method:'POST',
@@ -34,6 +34,8 @@ axios({
     console.log('POST /api/feedback error:', error);
       alert('Could not post a new feedback to the server.');
 })
+
+history.push('/thankyou');
 
 };
 

@@ -42,7 +42,7 @@ function Feeling() {
                         autoComplete="off"
 
                     >
-                        <TextField data-testid="input" id="outlined-basic" label="1-10" variant="outlined" value={currentFeeling} onChange={(evt) => setCurrentFeeling(evt.target.value)} />
+                        <input data-testid="input" id="outlined-basic" label="1-10" variant="outlined" value={currentFeeling} onChange={(evt) => setCurrentFeeling(evt.target.value)} />
                     </Box>
                     <Button variant="contained" color="primary" type="submit" data-testid="next"
                     // onClick={handleClick}

@@ -33,7 +33,7 @@ function Support() {
                         autoComplete="off"
 
                     >
-                        <TextField data-testid="input" id="outlined-basic" label="1-10" variant="outlined" value={currentSupport} onChange={(evt) => setCurrentSupport(evt.target.value)} />
+                        <input data-testid="input" id="outlined-basic" label="1-10" variant="outlined" value={currentSupport} onChange={(evt) => setCurrentSupport(evt.target.value)} />
                     </Box>
                     <Button variant="contained" color="primary" type="submit" data-testid="next"
                     >Next</Button>

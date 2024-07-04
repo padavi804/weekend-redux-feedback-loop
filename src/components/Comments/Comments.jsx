@@ -32,7 +32,7 @@ function Comments() {
                     noValidate
                     autoComplete="off"
                 >
-                    <TextField
+                    <textarea
                         data-testid="input"
                         id="outlined-multiline-static"
                         label="Comment"
